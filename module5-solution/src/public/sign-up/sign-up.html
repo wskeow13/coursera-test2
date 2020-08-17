@@ -33,9 +33,9 @@
             <!-- Phone -->
             <div class="form-group">
                 <label>Phone</label>
-                <input class="form-control" type="text" name="phone" placeholder="(###) ###-####" ng-model="signup.user.phone" pattern="\((\d{3})\)(\d{3})-(\d{4})" maxlength="13">
+                <input class="form-control" type="text" name="phone" placeholder="(###)###-####" ng-model="signup.user.phone" pattern="\((\d{3})\)(\d{3})-(\d{4})" maxlength="13">
                 <span ng-if="signupForm.phone.$invalid && signupForm.phone.$touched">
-                    Phone must be in the format (###)###-####.
+                    *Phone must be in this format '(###)###-####'.
                 </span>
             </div>
 
@@ -44,7 +44,7 @@
                 <label>Enter menu number of your favorite dish. <a ui-sref="public.menu" target="_blank">Click here for Menu!</a></label>
                 <input class="form-control" type="text" name="dish" placeholder="Menu number e.g. A1" ng-model="signup.user.dish" required>
                 <span ng-if="signupForm.dish.$error.required && signupForm.dish.$touched">
-                    Menu number must be in the correct format (e.g. A1).
+                    *Menu number is required.
                 </span>
 
                 <!-- Not a valid dish number -->
