@@ -1,0 +1,20 @@
+<h1 class="text-center">My Info</h1>
+</br>
+<div ng-if="info.flag == true" class="text-center">
+    <strong>First Name: </strong>{{ info.myInfoData.firstname }}<br>
+    <strong>Last Name: </strong>{{ info.myInfoData.lastname }}<br>
+    <strong>Email: </strong>{{ info.myInfoData.email }}<br>
+    <strong>Phone: </strong>{{ info.myInfoData.phone }}<br>
+    <strong>Favourite Dish: </strong>{{ info.dish.title }}<br>
+    <strong>Description: </strong>{{ info.dish.description }}<br>
+    <br />
+    <img width="200" height="200"
+    ng-src="images/menu/{{ info.dish.pic }}/{{ info.dish.pic }}.jpg" />
+</div>
+
+<div ng-if="!info.flag" class="text-center">
+    Not Signed Up Yet.
+    <a ui-sref="public.sign-up">
+        Sign up Now!
+    </a>
+<div>
